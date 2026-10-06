@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dar Atlas | Artisanat algérien</title>
+  <meta name="description" content="Dar Atlas : boutique en ligne d'artisanat algérien. Poteries, tapis, bijoux et cosmétiques naturels.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- En-tête : logo + bouton panier -->
+  <header>
+    <div class="logo">Dar <span>Atlas</span></div>
+    <button id="cart-button" class="cart-button">
+      🛒 Panier (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <!-- Bannière d'accueil -->
+  <section class="hero">
+    <h1>L'artisanat algérien, chez vous</h1>
+    <p>Des pièces uniques faites à la main par des artisans de Kabylie, du Sahara et des Aurès.</p>
+    <a href="#catalogue" class="btn">Découvrir la boutique</a>
+  </section>
+
+  <!-- Catalogue -->
+  <main id="catalogue">
+    <h2>Nos produits</h2>
+
+    <!-- Boutons de filtre par catégorie (gérés en JavaScript) -->
+    <div class="filters">
+
+      <button class="filter active" data-category="tous">Tous</button>
+      <button class="filter" data-category="poterie">Poterie</button>
+      <button class="filter" data-category="tapis">Tapis</button>
+      <button class="filter" data-category="bijoux">Bijoux</button>
+      <button class="filter" data-category="cosmetique">Cosmétiques</button>
+    </div>
+
+    <!-- Les produits seront ajoutés ici par JavaScript -->
+    <div id="product-list" class="product-list"></div>
+  </main>
+
+  <!-- Panier (fenêtre latérale) -->
+  <aside id="cart" class="cart">
+    <div class="cart-header">
+      <h2>Votre panier</h2>
+      <button id="close-cart" class="close">✕</button>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="cart-footer">
+      <p>Total : <strong id="cart-total">0 DA</strong></p>
+      <button id="checkout" class="btn">Commander</button>
+    </div>
+  </aside>
+
+  <footer>
+    <p>© 2026 Dar Atlas · Projet réalisé par Soumeya Matougui · Boutique fictive</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
